@@ -1,25 +1,141 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="16h-77-AQa">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DTWebService demo-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1kN-V5-ZJg">
+                                <rect key="frame" x="16" y="117" width="288" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgH-8q-CwK">
+                                <rect key="frame" x="45" y="127" width="69" height="30"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnService1DownloadAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DBd-I4-O7C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0H-N8-dlN">
+                                <rect key="frame" x="211" y="127" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnService1CancelAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gIv-ul-nHj"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I8k-iu-jnX">
+                                <rect key="frame" x="16" y="257" width="288" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORy-HB-54B">
+                                <rect key="frame" x="211" y="267" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnService2CancelAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eFi-ne-B3M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-at-AR3">
+                                <rect key="frame" x="45" y="267" width="69" height="30"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnService2DownloadAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7FH-PR-0aj"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a url to download file 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKr-Fc-GUe">
+                                <rect key="frame" x="17" y="79" width="287" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a url to download file 2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMe-50-VmU">
+                                <rect key="frame" x="16" y="219" width="287" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1kN-V5-ZJg" firstAttribute="trailing" secondItem="I8k-iu-jnX" secondAttribute="trailing" id="3ia-cb-kxi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bMe-50-VmU" secondAttribute="trailing" constant="1" id="54K-M5-g6K"/>
+                            <constraint firstItem="bMe-50-VmU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="6TB-gx-QtD"/>
+                            <constraint firstItem="bgH-8q-CwK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="29" id="7SH-Te-hIk"/>
+                            <constraint firstItem="1kN-V5-ZJg" firstAttribute="top" secondItem="dKr-Fc-GUe" secondAttribute="bottom" constant="8" symbolic="YES" id="9G0-ts-KQ6"/>
+                            <constraint firstItem="bgH-8q-CwK" firstAttribute="top" secondItem="1kN-V5-ZJg" secondAttribute="bottom" constant="8" symbolic="YES" id="ABl-f1-q4l"/>
+                            <constraint firstItem="1kN-V5-ZJg" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="AxM-85-eFI"/>
+                            <constraint firstItem="dKr-Fc-GUe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="EZg-Is-Gmm"/>
+                            <constraint firstItem="I8k-iu-jnX" firstAttribute="top" secondItem="bMe-50-VmU" secondAttribute="bottom" constant="8" symbolic="YES" id="Fr2-ms-dLg"/>
+                            <constraint firstItem="Wbg-at-AR3" firstAttribute="top" secondItem="I8k-iu-jnX" secondAttribute="bottom" constant="8" symbolic="YES" id="M5u-DI-c00"/>
+                            <constraint firstItem="bgH-8q-CwK" firstAttribute="leading" secondItem="Wbg-at-AR3" secondAttribute="leading" id="T4w-Gg-7Yb"/>
+                            <constraint firstItem="p0H-N8-dlN" firstAttribute="leading" secondItem="bgH-8q-CwK" secondAttribute="trailing" constant="97" id="XgZ-JG-kcv"/>
+                            <constraint firstItem="p0H-N8-dlN" firstAttribute="leading" secondItem="ORy-HB-54B" secondAttribute="leading" id="dYA-Ab-16g"/>
+                            <constraint firstItem="I8k-iu-jnX" firstAttribute="leading" secondItem="bMe-50-VmU" secondAttribute="leading" id="i3K-Ex-mrd"/>
+                            <constraint firstItem="bMe-50-VmU" firstAttribute="top" secondItem="bgH-8q-CwK" secondAttribute="bottom" constant="62" id="jiw-Ij-3ge"/>
+                            <constraint firstItem="p0H-N8-dlN" firstAttribute="baseline" secondItem="bgH-8q-CwK" secondAttribute="baseline" id="jyh-gO-BEM"/>
+                            <constraint firstItem="bMe-50-VmU" firstAttribute="leading" secondItem="1kN-V5-ZJg" secondAttribute="leading" id="lQy-cc-en4"/>
+                            <constraint firstItem="Wbg-at-AR3" firstAttribute="baseline" secondItem="ORy-HB-54B" secondAttribute="baseline" id="nKa-RK-99z"/>
+                            <constraint firstItem="dKr-Fc-GUe" firstAttribute="centerX" secondItem="1kN-V5-ZJg" secondAttribute="centerX" id="rf2-cj-Wgq"/>
+                            <constraint firstItem="1kN-V5-ZJg" firstAttribute="trailing" secondItem="dKr-Fc-GUe" secondAttribute="trailing" id="wdZ-8u-RZu"/>
+                        </constraints>
+                        <connections>
+                            <action selector="dismissKeyboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mem-bm-0z8"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="DTWebService demo" id="gme-kY-i7y"/>
+                    <connections>
+                        <outlet property="btnService1Cancel" destination="p0H-N8-dlN" id="ibL-qL-ghy"/>
+                        <outlet property="btnService1Download" destination="bgH-8q-CwK" id="WEv-hA-uTo"/>
+                        <outlet property="btnService2Cancel" destination="ORy-HB-54B" id="eCK-qq-zni"/>
+                        <outlet property="btnService2Download" destination="Wbg-at-AR3" id="qIz-gP-b3G"/>
+                        <outlet property="service1ProgressBar" destination="1kN-V5-ZJg" id="rNC-W0-8Gt"/>
+                        <outlet property="service2ProgressBar" destination="I8k-iu-jnX" id="G5n-Pr-qzo"/>
+                        <outlet property="tfFile1" destination="dKr-Fc-GUe" id="V1I-Ru-1OF"/>
+                        <outlet property="tfFile2" destination="bMe-50-VmU" id="bNo-6b-WKW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="694" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Css-gK-ZMi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="16h-77-AQa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SJM-vb-BEW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="enF-OA-cpk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncT-mX-QsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="337"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
