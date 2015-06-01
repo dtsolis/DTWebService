@@ -4,6 +4,7 @@ It also using blocks to track a successful's request response data, failure or t
 
 ## Install
 - Old fashioned way of copy-paste the `DTWebService` folder into your project
+- Using [CocoaPods](http://cocoapods.org/). Add `pod 'DTWebService'` to Podfile.
 
 ## Example usage
 Example 1: Make a simple request (changing the `sendAsyncRequest:` to `sendTrustedRequest:` will ignore any invalid SSL certificate)
