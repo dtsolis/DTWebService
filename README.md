@@ -1,5 +1,7 @@
 # DTWebService
 
+![Platforms][platforms-svg]
+
 [![Podspec][podspec-svg]][podspec-link]
 
 This is a wrapper to make HttpRequests and a NSURLRequest category that supports custom headers and files. Among other things, the web service, has the ability to ignore invalid SSL certificates (by setting trusted hosts). 
@@ -37,5 +39,6 @@ DTWebService *webService = [[DTWebService alloc] initWithURL:[NSURL URLWithStrin
 [webService stop]; // stop/cancel the request
 </pre>
 
- [podspec-svg]: https://img.shields.io/cocoapods/v/DTWebService.svg
- [podspec-link]: https://cocoapods.org/pods/DTWebService
+[podspec-svg]: https://img.shields.io/cocoapods/v/DTWebService.svg
+[podspec-link]: https://cocoapods.org/pods/DTWebService
+[platforms-svg]: https://img.shields.io/cocoapods/p/DTWebService.svg?style=flat
