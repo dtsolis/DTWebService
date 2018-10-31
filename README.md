@@ -42,3 +42,7 @@ DTWebService *webService = [[DTWebService alloc] initWithURL:[NSURL URLWithStrin
 [podspec-svg]: https://img.shields.io/cocoapods/v/DTWebService.svg
 [podspec-link]: https://cocoapods.org/pods/DTWebService
 [platforms-svg]: https://img.shields.io/cocoapods/p/DTWebService.svg?style=flat
+
+## License
+
+Apache licensed, as found in the [LICENSE.md](LICENSE.md) file.
